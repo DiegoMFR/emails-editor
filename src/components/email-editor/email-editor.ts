@@ -61,7 +61,7 @@ export default class EmailEditor extends HTMLElement {
         this.textInput.remove();
         this.textarea.innerHTML += parseEmailsHtml(serializeString(this.textInput.value));
         this.textInput.value = '';
-        this.textInput.setAttribute('placeholder', 'Add more people...');
+        this.textInput.setAttribute('placeholder', 'add more people...');
         this.textarea.appendChild(this.textInput);
         this.dispatchEvent(this.editorChangeEvt);
     }
