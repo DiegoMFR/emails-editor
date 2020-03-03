@@ -1,4 +1,4 @@
-# Email Editor
+# Emails Editor
 
 Simple text editor web component for add and validate emails list.
 
@@ -64,7 +64,7 @@ document.querySelector('email-editor').addEmail()
 - Listen for changes
 
 ```js
-document.querySelector('email-editor')..addEventListener('editor:change', myEventHandler)
+document.querySelector('email-editor').addEventListener('editor:change', myEventHandler)
 ```
 # Project Settings
 
@@ -101,10 +101,6 @@ npm run test
 * [Webpack](https://webpack.js.org/) - Bundle creation and artifacts pipeline.
 * [SASS](https://sass-lang.com/) - Modular CSS preprocessor.
 * [WebComponents](https://www.webcomponents.org/) - Web platform API for custom elements creation.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
