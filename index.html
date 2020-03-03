@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Getting Started</title>
+  <!-- Main bundle (CSS is separate so user can skip it)-->
+  <script src="dist/bundle.js" defer></script>
+  <link rel="stylesheet" href="dist/main.css">
+  <!-- Outer CSS -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="share-widget">
+    <div class="share-widget__editor">
+      <h2 class="share-widget__editor__title">
+        Share <b>Board Name</b> with others
+      </h2>
+      <email-editor></email-editor>
+    </div>
+    <div class="share-widget__controls">
+      <button class="btn" onclick="insertEmail()"> Add Email</button>
+      <button class="btn" onClick="alertEmails()"> Get Emails Count</button>
+    </div>
+  </div>
+  <div class="share-widget">
+    <div class="share-widget__editor">
+      <h2 class="share-widget__editor__title">
+        Share <b>Board Name</b> with others
+      </h2>
+      <email-editor></email-editor>
+    </div>
+    <div class="share-widget__controls">
+      <button class="btn" onclick="insertEmail()"> Add Email</button>
+      <button class="btn" onClick="alertEmails()"> Get Emails Count</button>
+    </div>
+  </div>
+</body>
+
+<script>
+  //Get emails
+  function alertEmails() {
+    alert(
+      'Valid emails: ' +
+      event.target.closest('.share-widget').querySelector('email-editor').getEmailsCount()
+    );
+  }
+
+  function insertEmail() {
+    event.target.closest('.share-widget').querySelector('email-editor').addEmail();
+  }
+  //Subscribe to changes
+  document.querySelector('email-editor').addEventListener('editor:change', (e) => {console.log(e)});
+</script>
+
+</html>
