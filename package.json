@@ -18,7 +18,8 @@
       "ts",
       "tsx",
       "js"
-    ]
+    ],
+    "testEnvironment": "jest-environment-jsdom-sixteen"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "css-loader": "^3.4.2",
     "jest": "^25.1.0",
+    "jest-environment-jsdom-sixteen": "^1.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "style-loader": "^1.1.3",
     "ts-jest": "^25.2.1",

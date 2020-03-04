@@ -66,11 +66,12 @@ export default class EmailEditor extends HTMLElement {
         this.dispatchEvent(this.editorChangeEvt);
     }
 
-    public getEmailsCount = () => (
-        this.querySelectorAll('email-item:not(.invalid)').length
-    );
+    public getEmailsCount = function():number {
+        return this.querySelectorAll('email-item:not(.invalid)').length;
+    };
+    
 
-    public addEmail = () => {
+    public addEmail = function():void {
         this.textInput.value = getRandomEmail();
         this.populateArea();
     }
